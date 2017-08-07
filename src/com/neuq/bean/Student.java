@@ -14,14 +14,18 @@ public class Student implements Serializable{
 	private String username;
 	private String pwd;
 	private String name;
-	private char sex;
+	private String sex;
 	private String studentclass;
 	private String telephone;
 	private String email;
 	private int ru;
 	
-	public Student() {
-		// TODO 自动生成的构造函数存根
+	public Student(String username, String psd, String realname, String studentclass) {
+		this.username = username;
+		this.pwd = psd;
+		this.name = realname;
+		this.studentclass = studentclass;
+		this.ru = 3;
 	}
 		
 	
@@ -35,7 +39,7 @@ public class Student implements Serializable{
 	 * @param email 学生邮箱
 	 * @param ru 管理员权限1，教师权限2，学生3
 	 */
-	public Student(String username, String pwd, String name, char sex, String studentclass, String telephone,
+	public Student(String username, String pwd, String name, String sex, String studentclass, String telephone,
 			String email) {
 		super();
 		this.username = username;
@@ -47,6 +51,11 @@ public class Student implements Serializable{
 		this.email = email;
 		this.ru = 3;
 	}
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -71,10 +80,10 @@ public class Student implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public char getSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(char sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 	public String getStudentclass() {
